@@ -1,10 +1,15 @@
 const annotations = {
     openapi: '3.0.0',
     info: {
-      title: 'School Institution APIs',
+      title: 'EventConnect APIs',
       version: '1.0.0',
-      description: 'API for managing the school',
+      description: 'API for Event management System',
     },
+    servers: [
+        {
+          url: 'http://localhost:3300',
+        },
+      ],
     'tags':[
         {name:'Users'},
         {name:'Event'},
