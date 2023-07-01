@@ -4,7 +4,7 @@ import appleLogo from "../assets/apple-logo.jpg";
 const ResponsivePage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-cover bg-fixed bg_image">
-      <div className="hidden sm:block">
+      <div className="sm:block">
        
         <h1 className="text-white text-center text-2xl md:text-2xl lg:text-3xl">
           Beautiful places to <br/>
@@ -15,11 +15,11 @@ const ResponsivePage = () => {
           Choose your dreams destination, arena and <br /> much more for your event
         </h1>
 
-        <button className="w-full my-5 bg-violet-900 text-white px-8 py-2 mt-6 rounded-full">
+        <button className="w-full my-5 bg-violet-900 text-white px-8 py-2 mt-5 p-2 rounded-lg focus:border-blue-500 border-stone-200 text-center">
           Sign up free
         </button>
 
-        <button className="w-full my-5  bg-indigo-900 text-white px-8 py-2 mt-4 rounded-full">
+        <button className="w-full my-5  bg-indigo-900 text-white px-8 py-2 mt-4 p-2 rounded-lg focus:border-blue-500 border-stone-200 text-center">
           <img
             src={googleLogo}
             alt="Google logo"
@@ -28,7 +28,7 @@ const ResponsivePage = () => {
           Continue with Google
         </button>
 
-        <button className="w-full my-5 bg-indigo-900 text-white px-8 py-2 mt-4 rounded-full">
+        <button className="w-full my-5  bg-indigo-900 text-white px-8 py-2 mt-4 p-2 rounded-lg focus:border-blue-500 border-stone-200 text-center">
           <img
             src={appleLogo}
             alt="Apple logo"
