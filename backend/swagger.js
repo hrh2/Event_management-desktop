@@ -4,6 +4,14 @@ const annotations = {
       title: 'EventConnect APIs',
       version: '1.0.0',
       description: 'API for Event management System',
+      contact: {
+        name: 'Hirwa Rukundo Hope',
+        email: 'gakundohope5@gmail.com',
+        url: 'https://www.instagram.com/__.hirwa.__2/',
+      },
+      social: {
+        instagram: 'https://www.instagram.com/__.hirwa.__2/',
+      },
     },
     servers: [
         {
@@ -17,6 +25,33 @@ const annotations = {
         {name:'Wedding'},
         {name:'Profile'}
       ],
+  components: {
+    schemas: {
+      Venue: {
+        type: 'object',
+        properties: {
+          name: { type: 'string', required: true },
+          address: { type: 'string', required: true },
+          capacity: { type: 'number', required: true },
+          amenities: { type: 'array', items: { type: 'string' } },
+          offers: { type: 'array', items: { type: 'string' } },
+          imageUrls: { type: 'array', items: { type: 'string' } },
+        },
+      },
+      Event: {
+        type: 'object',
+        properties: {
+          name: { type: 'string', required: true },
+          date: { type: 'string', format: 'date', required: true },
+          time: { type: 'string', required: true },
+          venue: { type: 'string', required: true },
+          ticketPrices: { type: 'array', items: { type: 'number' }, required: true },
+          description: { type: 'string' },
+          imageUrls: { type: 'array', items: { type: 'string' } },
+        },
+      },
+    },
+  },
     paths: {
       '/v1/api/signup': {
         post: {
@@ -154,6 +189,200 @@ const annotations = {
             },
             '500': {
               description: 'Internal Server Error',
+            },
+          },
+        },
+      },
+      '/v1/api/store/venues': {
+        get: {
+          tags: ["Meeting","Wedding"],
+          summary: 'Get all venues',
+          responses: {
+            '200': {
+              description: 'OK',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'array',
+                    items: {
+                      $ref: '#/components/schemas/Venue',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        post: {
+          tags: ["Meeting", "Wedding"],
+          summary: 'Create a new venue',
+          requestBody: {
+            content: {
+              'application/json': {
+                schema: {
+                  $ref: '#/components/schemas/Venue',
+                },
+              },
+            },
+          },
+          responses: {
+            '201': {
+              description: 'Created',
+            },
+          },
+        },
+      },
+      '/v1/api/store/venues/{id}': {
+        get: {
+          tags: ["Meeting", "Wedding"],
+          summary: 'Get a venue by ID',
+          parameters: [
+            {
+              name: 'id',
+              in: 'path',
+              description: 'ID of the venue',
+              required: true,
+              schema: {
+                type: 'string',
+              },
+            },
+          ],
+          responses: {
+            '200': {
+              description: 'OK',
+              content: {
+                'application/json': {
+                  schema: {
+                    $ref: '#/components/schemas/Venue',
+                  },
+                },
+              },
+            },
+          },
+        },
+        put: {
+          tags: ["Meeting", "Wedding"],
+          summary: 'Update a venue',
+          parameters: [
+            {
+              name: 'id',
+              in: 'path',
+              description: 'ID of the venue',
+              required: true,
+              schema: {
+                type: 'string',
+              },
+            },
+          ],
+          requestBody: {
+            content: {
+              'application/json': {
+                schema: {
+                  $ref: '#/components/schemas/Venue',
+                },
+              },
+            },
+          },
+          responses: {
+            '200': {
+              description: 'OK',
+            },
+          },
+        },
+      },
+      '/v1/api/store/events': {
+        get: {
+          tags: ["Event"],
+          summary: 'Get all events',
+          responses: {
+            '200': {
+              description: 'OK',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'array',
+                    items: {
+                      $ref: '#/components/schemas/Event',
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+        post: {
+          tags: ["Event"],
+          summary: 'Create a new event',
+          requestBody: {
+            content: {
+              'application/json': {
+                schema: {
+                  $ref: '#/components/schemas/Event',
+                },
+              },
+            },
+          },
+          responses: {
+            '201': {
+              description: 'Created',
+            },
+          },
+        },
+      },
+      '/v1/api/store/events/{id}': {
+        get: {
+          tags: ["Event"],
+          summary: 'Get an event by ID',
+          parameters: [
+            {
+              name: 'id',
+              in: 'path',
+              description: 'ID of the event',
+              required: true,
+              schema: {
+                type: 'string',
+              },
+            },
+          ],
+          responses: {
+            '200': {
+              description: 'OK',
+              content: {
+                'application/json': {
+                  schema: {
+                    $ref: '#/components/schemas/Event',
+                  },
+                },
+              },
+            },
+          },
+        },
+        put: {
+          tags: ["Event"],
+          summary: 'Update an event',
+          parameters: [
+            {
+              name: 'id',
+              in: 'path',
+              description: 'ID of the event',
+              required: true,
+              schema: {
+                type: 'string',
+              },
+            },
+          ],
+          requestBody: {
+            content: {
+              'application/json': {
+                schema: {
+                  $ref: '#/components/schemas/Event',
+                },
+              },
+            },
+          },
+          responses: {
+            '200': {
+              description: 'OK',
             },
           },
         },

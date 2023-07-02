@@ -13,6 +13,7 @@ const {annotations}=require('./swagger')
 
 const signUpRoute=require('./controllers/signupApi')
 const loginRoute=require('./controllers/loginApi')
+const storeRoute=require('./controllers/storeApi')
 
 
 //configuration
@@ -30,6 +31,7 @@ app.use(cors())
 
 app.use('/v1/api/signup',signUpRoute)
 app.use('/v1/api/login',loginRoute)
+app.use('/v1/api/store', storeRoute)
 app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(annotations))
 
 //establishing connection with database
@@ -37,5 +39,5 @@ connection();
 
 //starting the server
 app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${PORT}`);
+  console.log(`Server started on http://localhost:${PORT}/api-docs`);
   });
