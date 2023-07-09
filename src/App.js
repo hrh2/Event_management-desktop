@@ -7,9 +7,14 @@ import SignUp from './components/SignUp'
 import ResetPassword from './components/ResetPassword'
 import ForgotPassword from './components/ForgotPassword'
 import AutheLayout from './components/AutheLayout';
+import Homepage from './components/SubComponents/Homepage';
+import HomepagePhoto from './components/SubComponents/HomepagePhoto';
 function App() {
   return (
     <Routes>
+      <Route path='/Homepage' exact element={<Homepage />} />
+      <Route path='/HomepagePhoto' exact element={<HomepagePhoto/>} />
+      
       <Route path='/' exact element={<DesktopLanding/>} />
       <Route path='/enteraccount' exact element={<ResponsivePage/>} />
       <Route path='/authentication' exact element={<AutheLayout />}>

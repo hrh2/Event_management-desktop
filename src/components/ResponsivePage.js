@@ -6,12 +6,12 @@ const ResponsivePage = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-cover bg-fixed bg_image">
       <div className="sm:block">
        
-        <h1 className="text-white text-center text-2xl md:text-2xl lg:text-3xl">
+        <h1 className="mt-4 text-white text-center text-2xl md:text-2xl lg:text-3xl">
           Beautiful places to <br/>
           Book around you.
         </h1>
 
-        <h1 className="text-white text-center text-1xl mt-4 md:text-1xl lg:text-2xl">
+        <h1 className="w-full my-5 px-8 py-2 text-white text-center text-1xl mt-2 md:text-3xl lg:text-2xl">
           Choose your dreams destination, arena and <br /> much more for your event
         </h1>
 
