@@ -140,7 +140,7 @@ const BookPage = () => {
         {/* Amenities */}
         <div className="mt-4">
           <p className="font-semibold text-gray-800">Amenities</p>
-          <p className="ml-1 text-gray-400">Dug Outs, Washrooms, Parking, First-Aid</p>
+          <p className="ml-1 text-gray-600">Dug Outs, Washrooms, Parking, First-Aid</p>
         </div>
 
       </main>
