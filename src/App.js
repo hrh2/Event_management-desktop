@@ -9,9 +9,11 @@ import ForgotPassword from './components/ForgotPassword'
 import AutheLayout from './components/AutheLayout';
 import Homepage from './components/SubComponents/Homepage';
 import HomepagePhoto from './components/SubComponents/HomepagePhoto';
+import BookPage from './components/SubComponents/BookPage';
 function App() {
   return (
     <Routes>
+      <Route path='/BookPage' exact element={<BookPage />} />
       <Route path='/Homepage' exact element={<Homepage />} />
       <Route path='/HomepagePhoto' exact element={<HomepagePhoto/>} />
       
