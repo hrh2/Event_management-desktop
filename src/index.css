@@ -10,3 +10,17 @@
     width: 100%;
     height: 100vh;
 }
+@font-face {
+    font-family: 'Akaya Kanadaka';
+    src: url('./font/Akaya_Kanadaka/AkayaKanadaka-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Advent Pro';
+    src: url('./font/Advent_Pro/AdventPro-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+.Akaya{
+    font-family: 'Akaya Kanadaka', cursive;
+}
+.AdventPro{
+    font-family: 'Advent Pro', cursive;
+}
