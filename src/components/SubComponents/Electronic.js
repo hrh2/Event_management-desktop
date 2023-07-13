@@ -26,9 +26,9 @@ const Electronic = () => {
         <div className="w-80 h-10 bg-red-300 mt-2"></div>
 
         {/* Two square boxes */}
-        <div className="flex justify-between mt-4">
+        <div className="  mt-4 grid grid-cols-2 gap-1">
           {/* Left box */}
-          <div className="w-40 h-40 bg-amber-200 flex flex-col items-center justify-center">
+          <div className="h-40 bg-amber-200 flex flex-col items-center justify-center">
             <p className="text-center">B block</p>
             <p className="text-sm">(Premium)</p>
             <p className="text-lg text-center">Rs 5000</p>
@@ -37,7 +37,7 @@ const Electronic = () => {
          
 
           {/* Right box */}
-          <div className="w-40 h-40 ml-2 mr-3 bg-teal-300 flex flex-col items-center justify-center">
+          <div className="h-40 bg-teal-300 flex flex-col items-center justify-center">
             <p className="text-center">C block</p>
             <p className="text-sm">(Premium)</p>
             <p className="text-lg text-center">Rs 5000</p>
@@ -53,12 +53,12 @@ const Electronic = () => {
         {/* Ticket Count */}
         <div className="flex items-center mt-4 ">
           <p className="ml-2 mr-20">No of tickets</p>
-          <div className="flex bg-gray-200 rounded ml-14 rounded-s-2xl">
-          <button className="bg-gray-200 px-2 py-2" onClick={handleDecrement}>
+          <div className="grid grid-cols-3 bg-gray-200 rounded-xl w-20  ml-14">
+          <button className="" onClick={handleDecrement}>
             -
           </button>
-          <p className="mx-2 mt-2">{ticketCount}</p>
-          <button className="bg-gray-200 px-2 py-2" onClick={handleIncrement}>
+          <p className="text-center justify-center py-2">{ticketCount}</p>
+          <button className="" onClick={handleIncrement}>
             +
           </button>
           </div>
