@@ -65,7 +65,7 @@ const Electronic = () => {
            </div>
 
         {/* Book Now Button */}
-        <button className="bg-fuchsia-950 w-80 text-white px-4 py-2 mt-4 rounded">Book Now</button>
+        <button className="bg-fuchsia-950 w-80 text-white px-4 py-2 mt-6 rounded">Book Now</button>
         </div>
        
     </div>
