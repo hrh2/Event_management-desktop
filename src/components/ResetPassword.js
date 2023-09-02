@@ -1,18 +1,7 @@
 import React from 'react';
 export default function ResetPassword() {
   return (
-          <div className='bg-gray-800 flex flex-col justify-center'>
-            <div className='max-w-[400px] w-full mx-auto rounded-lg bg-gra-900 p-8 px-8'>
-                <h2 className='text-4xl font-bold text-center mt-1 text-gray-500'>Welcome! <br /> Welcome back.</h2>
-               
-                   <div className='flex flex-col text-gray-400 py-1 mt-1'>
-                    <label>Email address</label>
-                    <input className='rounded-lg bg-gray-700 mt-1 p-2 border-orange-100' type="text" placeholder='augustinkrishi@gmail.com' />
-                  
-                
-          </div>
-          </div>
-                  
+          <div className='bg-gray-800 flex flex-col'>
                   <div className='bg-violet-800 flex flex-col justify-center mt-8 max-w-full'>
                        <div className='flex flex-col text-gray-400 py-1'>
                     <p className='text-white ml-10 mr-10 mt-2'>Reset password</p>

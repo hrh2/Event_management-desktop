@@ -15,11 +15,10 @@ export default function Login() {
                 </div>
                 <div className='flex justify-between text-gray-400 py-2'>
                     <p className='flex items-center'><input className='mr-2' type="checkbox" /> Remember Me</p>
-                    <a href='/authentication/forgot'>Forgot Password?</a>
+                    <a href='/#'>Forgot Password?</a>
                 </div>
                   <button className='w-full my-5 py-2 bg-violet-900 shadow-lg shadow-slate-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg'>Log In</button>
-                  <p className='text-1xl dark:text-white  text-center mt-1' >You don't have an account? <a href="/authentication/signup" className='text-blue-900'>Sign Up</a></p>
-                
+                  <p className='text-1xl dark:text-white  text-center mt-1' >You don't have an account? <a href="/authentication/signup" className='text-blue-900'>Sign Up</a></p>       
             </form>
         </div>
   )

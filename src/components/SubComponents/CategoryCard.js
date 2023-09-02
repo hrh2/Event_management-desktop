@@ -3,7 +3,7 @@ import image from '../../assets/background.jpg';
 
 export default function CategoryCard() {
      return (
-          <div className="bg-gradient-to-b from-purple-900 to-green-600 w-[15em] h-[15em] rounded-3xl relative shadow-md">
+          <div className="bg-gradient-to-b from-purple-900 to-green-600 sm:w-[10em] md:w-[12em]  w-[10em] aspect-square rounded-3xl relative shadow-md">
                <svg
                     className="absolute top-0 right-0 filter drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))"
                     viewBox="0 0 169 160"
